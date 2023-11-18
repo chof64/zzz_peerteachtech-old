@@ -1,5 +1,7 @@
 ---
-// This is to receive the title from the page.
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -9,12 +11,14 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title}</title>
+    <title>{title || "PeerTeachTech - Website Development"}</title>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <!-- Add the child component -->
-    <slot />
+    <div>
+      <slot />
+    </div>
+    <Footer />
   </body>
 </html>
