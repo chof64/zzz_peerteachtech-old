@@ -1,16 +1,95 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { cn } from "../lib/utils.js";
 ---
 
-<Layout title="Astro + Tailwind">
+<Layout>
   <main>
-    <section class="container h-screen flex items-center justify-center">
-      <div>
-        <h1 class="text-center font-extrabold text-5xl">
-          Astro + Tailwind CSS
+    <section
+      class="h-screen bg-gradient-to-b from-blue-100 via-purple-50 to-transparent flex items-center justify-center"
+    >
+      <div class="container">
+        <h1 class={cn("typo-h typo-h1 text-center", "md:text-7xl text-4xl")}>
+          PeerTeachTech
         </h1>
-        <p class="text-lg font-medium text-neutral-600 text-center">
-          chof64/boilerplate-astro-tailwind
+        <h2
+          class={cn(
+            "typo-h typo-h2",
+            "text-2xl md:text-4xl text-center text-neutral-800"
+          )}
+        >
+          Website Development
+        </h2>
+        <p class="text-center text-sm font-medium mt-4">
+          November 25-26, 2023 <br /> CCS Activity Center, UA
+        </p>
+      </div>
+      <div
+        class="absolute bottom-16 inset-x-0 text-center text-sm font-medium md:text-base"
+      >
+        Brought to you by <span class="typo-gradient-1 font-semibold"
+          >CHADWORKS</span
+        > and <span class="typo-gradient-1 font-semibold">PSITS</span>
+      </div>
+    </section>
+    <section class="container max-w-2xl py-32">
+      <div>
+        <h2 class={cn("typo-h typo-h2 text-center", "text-2xl md:text-4xl")}>
+          What is PeerTeachTech
+        </h2>
+        <p
+          class={cn(
+            "typo-p text-lg text-neutral-600 font-medium text-center md:text-left"
+          )}
+        >
+          PeerTeachTech is an initiative by <span
+            class="typo-gradient-1 font-semibold">CHADWORKS</span
+          > and <span class="typo-gradient-1 font-semibold">PSITS</span> to help
+          students learn programming and web development. With workshops and
+          hands-on projects, we aim to help students learn the basics of web
+          development and programming.
+        </p>
+      </div>
+    </section>
+
+    <section class="container max-w-2xl py-32">
+      <div>
+        <h2 class="typo-h typo-h2 text-center">Our Topics</h2>
+        <ul
+          class="my-6 ml-6 list-disc [&>li]:mt-2 text-lg text-neutral-600 font-medium"
+        >
+          <li>Getting started with Web Development.</li>
+          <li>What is npm and what are the benefits from using it.</li>
+          <li>
+            Your first tech stack, RocketWind. (<a
+              href="https://astro.build"
+              class="typo-link"
+              target="_blank"
+              rel="noopenner noreferrer">Astro JS</a
+            > + <a
+              href="https://tailwindcss.com"
+              class="typo-link"
+              target="_blank"
+              rel="noopenner noreferrer">Tailwind CSS</a
+            >)
+          </li>
+          <li>Installing and setting up your project repository.</li>
+          <li>Code review and building your project.</li>
+          <li>A lot of tips and tricks in coding...</li>
+        </ul>
+      </div>
+    </section>
+    <section class="container max-w-2xl py-32">
+      <div>
+        <h2 class="typo-h typo-h2 text-center">Mark Your Calendars</h2>
+        <p class="typo-p text-xl">
+          <span class="typo-gradient-1 font-semibold">PeerTeachTech</span> will
+          be held on <span class="typo-gradient-2 font-semibold"
+            >November 25-26, 2023</span
+          >
+           at the <span class="typo-gradient-2 font-semibold"
+            >CCS Activity Center</span
+          >, University of Antique, Sibalom, Antique.
         </p>
       </div>
     </section>
